@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script lang="ts">
 export default {
-  name: 'App'
+    name: 'MainLayoutView'
 }
 </script>
