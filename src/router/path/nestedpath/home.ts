@@ -9,7 +9,10 @@ const HomeRoute = {
             name: 'HomePage',
             path: '',
             alias: '/',
-            component: () => import('@/pages/home/HomePage.vue')
+            component: () => import('@/pages/home/HomePage.vue'),
+            meta: {
+                title: 'Home'
+            }
         }
     ]
 }

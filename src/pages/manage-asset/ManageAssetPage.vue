@@ -1,11 +1,9 @@
 <template>
-    <div>
+    <Wrapper>
         this is manage asset page
-    </div>
+    </Wrapper>
 </template>
 
-<script lang="ts">
-export default {
-    name: 'ManageAssetPage'
-}
+<script setup lang="ts">
+import Wrapper from '@/components/atoms/Wrapper.vue'
 </script>

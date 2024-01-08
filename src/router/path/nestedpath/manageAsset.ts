@@ -8,7 +8,10 @@ const ManageAssetRoute = {
         {
             name: 'ManageAssetPage',
             path: '',
-            component: () => import('@/pages/manage-asset/ManageAssetPage.vue')
+            component: () => import('@/pages/manage-asset/ManageAssetPage.vue'),
+            meta: {
+                title: 'Manage Asset'
+            }
         }
     ]
 }
