@@ -62,4 +62,5 @@ Notes:
 - **Date & Time Utility**: [dayjs](https://day.js.org/)
 - **Data Fetching**: [axios](https://github.com/axios/axios)
 - **Routing**: [Vue router](https://router.vuejs.org/)
+- **Api Mock**: [Vue router](https://mswjs.io/)
 
