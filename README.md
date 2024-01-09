@@ -1,18 +1,66 @@
-# Vue 3 + TypeScript + Vite
+# Front-end Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[Vue.js](https://vuejs.org/) 
+[Vite](https://vitejs.dev/)
 
-## Recommended IDE Setup
+## Getting Started
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. Clone this repo.
+2. Run `npm install` to install dependencies.
+3. Configure environment variables.
+   - Create `.env.local` file (or `.env.development`, or `.env.production`, see [official docs](https://vitejs.dev/guide/env-and-mode.html#env-variables-and-modes)).
+4. Run `npm run dev`.
 
-## Type Support For `.vue` Imports in TS
+## Scripts
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- `npm run dev` - Run in development mode
+- `npm run build` - Build the application for production
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Documentation
+<!-- [https://kmart-office-docs.vercel.app/](https://kmart-office-docs.vercel.app/) -->
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```raw
+.
+├── public/
+├── src/
+│   ├── api/
+│   ├── assets/
+│   │   ├── * images/
+│   │   └── * styles/
+│   │       └── main.scss
+│   ├── * components/
+│   │   ├── * atoms/
+│   │   ├── * molecules/
+│   │   ├── * organisms/
+│   │   └── * templates/
+│   ├── mocks/
+│   │   └── * api/
+│   ├── * pages
+│   ├── plugins/
+│   ├── router/
+│   │   ├── * path
+│   │   └── index.ts
+│   └── utils/
+├── .env.local
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+Notes:
+📂: Folder
+⚛️: related folder
+```
+
+## Tools
+
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Date & Time Utility**: [dayjs](https://day.js.org/)
+- **Data Fetching**: [axios](https://github.com/axios/axios)
+- **Routing**: [Vue router](https://router.vuejs.org/)
+- **Api Mock**: [Msw](https://mswjs.io/)
+
