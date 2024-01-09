@@ -24,6 +24,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src", "mswServiceWorker.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

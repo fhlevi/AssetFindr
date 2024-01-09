@@ -2,7 +2,7 @@
     <Wrapper>
         <Card class-name="h-[351px] rounded flex-col flex justify-center items-center">
             <Icon :source="Logo" class-name="w-[90px] h-[90px]" />
-            <Text class="pb-4 pt-8 text-2xl">Welcome to Asset Findr</Text>
+            <Text class-name="pb-4 pt-8 text-2xl">Welcome to Asset Findr</Text>
         </Card>
     </Wrapper>
 </template>

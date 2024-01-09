@@ -1,12 +1,11 @@
-import { createApp } from 'vue'
-import '@/assets/styles/main.scss'
-import App from '@/App.vue'
-import { registerPlugins } from '@/plugins'
+import { createApp } from 'vue';
+import '@/assets/styles/main.scss';
+import '@/plugins/mockServiceWorker';
+import App from '@/App.vue';
+import { registerPlugins } from '@/plugins';
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+registerPlugins(app);
 
-app.mount('#app')
-
-
+app.mount('#app');

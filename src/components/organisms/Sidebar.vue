@@ -4,7 +4,7 @@
             <Icon :source="Logo" class-name="w-[90px] h-full" />
         </div>
         <MenuLink
-            v-for="(item, i) in Links"
+            v-for="(item, i) in state.Links"
             :key="i"
             :link="item.to"
             :name="item.label"
@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { onMounted, reactive } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import Icon from '@/components/atoms/Icon.vue';
 import MenuLink from '@/components/molecules/MenuLink.vue';
 
@@ -34,33 +34,42 @@ interface Link {
 }
 
 const router = useRouter()
+const route = useRoute()
 
-let Links = ref<Link[]>([
-    { 
-        label: "Home", 
-        to: "/", 
-        icon: Home,
-        active: true, 
-    },
-    { 
-        label: "Manage Asset", 
-        to: "/manage-asset", 
-        icon: Wallet,
-        active: false,
-    },
-    { 
-        label: "Settings", 
-        to: "#", 
-        icon: Settings,
-        active: false,
-    },
-])
+const state = reactive({
+    Links: <Link[]> [
+        { 
+            label: "Home", 
+            to: "/", 
+            icon: Home,
+            active: true, 
+        },
+        { 
+            label: "Manage Asset", 
+            to: "/manage-asset", 
+            icon: Wallet,
+            active: false,
+        },
+        { 
+            label: "Settings", 
+            to: "#", 
+            icon: Settings,
+            active: false,
+        },
+    ]
+})
 
-const triggerLinkDirection = (label: string, to: string) => {
-    router.push(to)
+onMounted(() => {
+    triggerLinkDirection()
+})
 
-    Links.value.forEach(link => {
-        link.active = link.label === label; 
+const triggerLinkDirection = (label?: string | undefined, to?: string) => {
+    if (to) router.push(to)
+
+    const title = label ?? route?.meta?.title
+
+    state.Links.forEach(link => {
+        link.active = link.label === title; 
     });
 }
 </script>

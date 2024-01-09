@@ -1,5 +1,5 @@
 <template>
-    <div :class="['w-full bg-white border border-black border-opacity-10', className]">
+    <div :class="[className, 'w-full bg-white border border-black border-opacity-10']">
         <slot></slot>
     </div>
 </template>

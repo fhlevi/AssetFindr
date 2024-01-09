@@ -16,7 +16,7 @@
 import { useRoute } from 'vue-router';
 import Text from '@/components/atoms/Text.vue';
 import Icon from '@/components/atoms/Icon.vue';
-import Notification from '@/assets/images/icons/notification.png'
+import Notification from '@/assets/images/icons/notification.png';
 
 const route = useRoute()
 </script>
